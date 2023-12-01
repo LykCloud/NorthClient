@@ -1,4 +1,4 @@
-name: NorthClient
+name: Compix Cloud 📡
 defaulttheme: NorthClientTheme
 logo: https://media.discordapp.net/attachments/984837636457918465/1000014634012647464/giphy.gif
 version: 2.0.0
@@ -11,11 +11,11 @@ data:
  number: "+49 1567 120321235"
 
 gift:
-  enabled: true
+  enabled: false
 
 discordserver:
   enabled: true
-  invitelink: https://discord.gg/c2V7NKKWCT
+  invitelink: https://discord.gg/ahFYTkbTKA
 
 ads:
   enabled: false
@@ -27,8 +27,8 @@ guildblacklist:
   - ServerID
 
 pterodactyl: ##go to ur panel get a api
-  domain: https://panel.example.de
-  key: ptla_yourexamplepteroapi
+  domain: http://64.110.109.104
+  key: ptla_fUyTwEBCiHasupx0KesefAAdiiYjjTQJPYRLWKtSYf5
 
 AFK Party: 
   enabled: false
@@ -38,25 +38,21 @@ AFK Party:
 
 changelog:
   first:
-    header: Projekt Start
-    text: The project has started on 20.07.2022 at 21:00.
-    sent: sent 20.07.2022
-  second:
-    header: New Design
-    text: We went right to work on a new design.
-    sent: sent 20.07.2022
+    header: Compix Cloud 📡
+    text: Compix Cloud 📡
+    sent: Compix Cloud 📡
 
 linkvertise: ##go to https://publisher.linkvertise.com/ to get ur userid
-  enabled: true
+  enabled: false
   userid: 00000
   coins: 25
 
 status:
-  enabled: true
+  enabled: false
   script: https://example.com
 
 stripe:
-  enabled: true  
+  enabled: false
   key: 0000000000 # Replace this with your Stripe API Key
   coins: 200 # Coins per amount in USD
   amount: 1
@@ -70,11 +66,11 @@ smtp:
 
 api:
   server:
-    enabled: true
+    enabled: false
     key: API KEY
   client:
     j4r: 
-      enabled: true
+      enabled: false
       ads:
       - name: Example Server 1
         id: 984837635879104602
