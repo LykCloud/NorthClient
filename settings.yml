@@ -149,58 +149,37 @@ api:
       default: default
       list:
         default:
-          ram: 1024
-          disk: 1024
+          ram: 1000
+          disk: 3024
           cpu: 100
           servers: 1
-          databases: 2
-          allocations: 2
-          backups: 2
+          databases: 1
+          allocations: 1
+          backups: 1
 
     locations:
       '1':
-        name: Node01
+        name: japan
         package: null
 
     eggs:
-      paper:
-        display: Minecraft Java
+      	Minecraft:
+        display: VPS
         minimum:
-          ram: 1024
-          disk: 1024
+          ram: 1000
+          disk: 3000
           cpu: 100
         maximum:
-          ram: 2000
-          disk: 2000
-          cpu: 2000
+          ram: 1000
+          disk: 3000
+          cpu: 100
         info:
-          egg: 3
-          docker_image: ghcr.io/pterodactyl/yolks:java_17
-          startup: java -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true
-            -jar {{SERVER_JARFILE}}
-          environment:
-            SERVER_JARFILE: server.jar
-            BUILD_NUMBER: latest
+          egg: 16
+          docker_image: ghcr.io/parkervcp/yolks:alpine
+          startup: sh vm.sh
           feature_limits:
-            databases: 4
-            backups: 4
-      discord.js generic:
-        display: Discordjsgeneric
-        minimum:
-          ram: 512
-          disk: 512
-          cpu: 0
-        maximum:
-          ram: 2000
-          disk: 2000
-          cpu: 2000
-        info:
-          egg: 15
-          docker_image: ghcr.io/parkervcp/yolks:nodejs_17
-          startup: if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == "1" ]]; then git pull; fi; if [[ ! -z ${NODE_PACKAGES} ]]; then /usr/local/bin/npm install ${NODE_PACKAGES}; fi; if [[ ! -z ${UNNODE_PACKAGES} ]]; then /usr/local/bin/npm uninstall ${UNNODE_PACKAGES}; fi; if [ -f /home/container/package.json ]; then /usr/local/bin/npm install; fi; /usr/local/bin/node /home/container/{{BOT_JS_FILE}}
-          feature_limits:
-            databases: 4
-            backups: 4
+            databases: 0
+            backups: 0
     coins:
       enabled: true
       store:
